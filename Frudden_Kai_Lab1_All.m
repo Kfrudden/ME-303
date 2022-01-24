@@ -41,8 +41,35 @@ end
 
 
 %% Problem 3
+clc,clear
 
 
+A=[1,2,1;4,8,4;6,3,1];
+B=[4,2,1;11,5,1;5,4,15];
+
+%% Problem 3a
+disp('Problem 3a')
+if size(A)==size(B)
+for i= 1:size(A,1)
+    for j=1:size(A,2)
+        C(i,j)=A(i,j)-B(i,j);
+    end
+end
+disp('Matrix A minus matrix B')
+C
+%disp('Check')
+C1=A-B;
+else
+    disp('Error: Matrix dimensions do not match')
+end
+ %% Problem 3b
+disp('Problem 3b')
+C=A*B
+fprintf('(A*B) multiplies the matrices using matrix multipication\n')
+C2=A.*B
+fprintf('Whereas (A.*B) multiplies each element of the B matrix by each element of the A matrix\n')
+
+%% Problem 3c
 
 
 
